@@ -1,8 +1,8 @@
 "use strict";
 
-let Alexa = require("alexa-sdk");
-let request = require('request-promise'); //for HTTP request
-let channelFromEvent = "";  //for extracting channel number out of event envoked this lamnda
+var Alexa = require("alexa-sdk");
+var request = require('request-promise'); //for HTTP request
+var channelFromEvent = "";  //for extracting channel number out of event envoked this lamnda
 
 const WELCOME_MESSAGE = process.env.WELCOME_PHRASE+"...Just let me know which channel number, do you want me to check. You can say, 'Help', OR.. 'Goodbye', at anytime.";
 const START_MESSAGE   = "...To start, just say, for example...'check channel 15', or you can say, 'check channel one five.";
