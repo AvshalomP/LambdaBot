@@ -1,8 +1,8 @@
 //getting request object
-let request = require('request-promise');
+var request = require('request-promise');
 
-let channelNumberFromEvent = "";
-let response = {
+var channelNumberFromEvent = "";
+var response = {
                     "dialogAction": {
                         "type": "Close",
                         "fulfillmentState": "Fulfilled",
@@ -31,7 +31,7 @@ return new Promise(function (resolve, reject) {
     jsonString.then(
         function(result) { 
             let json = JSON.parse(result);
-            for(var channel in json) {
+            for(let channel in json) {
                 if(channel === reqChannel){
                     channelStatus = json[channel];
                     resolve(channelStatus);
